@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+</head>
+<body>
+
+
+
+
+    <script>
+        let product = {
+            name: 'basketball',
+            price: 2095,
+            ['delvery-time']: '3 days'
+        }
+
+        console.log(product);
+
+        product.price += 500;
+        console.log(product.price)
+
+        function compareproducts(product1, product2) {
+            if (product1 < product2) {
+                return product1
+            } else{return product2}
+        }
+
+        let productA = {name: 'basketball', price: 2095};
+        let productB = {name: 'socks', price: 1095};
+
+        let cheaperProduct = compareproducts (productA, productB);
+
+        console.log(cheaperProduct);
+
+        function isSameProduct(product1, product2) {
+            if (product1.price === product2.price) {
+                return true
+            } else {return false};
+
+
+        }
+        
+           let product1 = {name: 'Spoon', price: 650};
+           let product2 = {name: 'cup', price: 650};
+            product2.price = 500
+           // product3: {name: 'Plate', price: 900}
+
+
+        // console.log(product1.price)
+        // console.log(products)
+        console.log(isSameProduct(product1, product2));
+
+        let greeting = 'Good Morning';
+        let lowerCaseGreeting = greeting.toLowerCase()
+        let repeat = lowerCaseGreeting.repeat(3)
+        console.log(greeting);
+        console.log(lowerCaseGreeting)
+        console.log(repeat)
+    </script>
+</body>
+</html>

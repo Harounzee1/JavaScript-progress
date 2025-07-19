@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<!-- Exercise 5l - 5r -->
+
+<body>
+    <input class="display" readonly>
+    <div>
+        <button onclick=" updateCalculator('1');">1</button>
+
+        <button onclick=" updateCalculator('2');">2</button>
+
+        <button onclick=" updateCalculator('3');">3</button>
+
+        <button onclick=" updateCalculator(' + ');">+</button>
+    </div>
+    
+    <div>           
+        <button onclick=" updateCalculator('4');">4</button>
+
+        <button onclick=" updateCalculator('5');">5</button>
+
+        <button onclick=" updateCalculator('6');">6</button>
+
+        <button onclick=" updateCalculator(' - ');">-</button>
+    </div>  
+
+    <div>
+        <button onclick=" updateCalculator('7');">7</button>
+
+        <button onclick=" updateCalculator('8');">8</button>
+
+        <button onclick=" updateCalculator('9');">9</button>
+
+        <button onclick=" updateCalculator(' * ');">x</button>
+    </div>
+
+    <div>
+        <button onclick=" updateCalculator('22/7');">#</button>
+
+        <button onclick=" updateCalculator('0');">0</button>
+
+        <button onclick=" updateCalculator('.');">.</button>
+
+        <button onclick=" updateCalculator(' / ');">/</button>
+    </div>
+
+    <div>
+        <button onclick=" updateCalculator('(');">(</button>
+
+        <button onclick=" updateCalculator(')');">)</button>
+
+        <button onclick=" calculation = eval(calculation); console.log(calculation);">=</button>
+
+        <button onclick="
+        calculation = ''; console.log(calculation);">Clear</button>
+    </div>
+
+    
+    <script>
+        let calculation = '';
+        console.log(calculation)
+
+          if (localStorage.getItem('calculate')) {
+            calculation = localStorage.getItem('calculate');
+            console.log('Restored:', calculation)
+            // console.log('calculation'.length);
+           }
+
+
+        function updateCalculator(value) {
+            let calculate = calculation += value;
+            // console.log(value)
+            console.log(calculate)
+
+            localStorage.setItem('calculate', calculate)
+
+            return calculate;
+            
+            // localStorage.setItem('calculato', eval);
+            
+
+        }
+
+        function calcInput() {
+            let result = eval(calculation);
+            console.log(result);
+
+            localStorage.setItem('result', result);
+
+            return result;
+        }
+    </script>
+</body>
+</html>

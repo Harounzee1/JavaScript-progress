@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>another one</title>
+</head>
+  <body>
+    <h2>GAME</h2>
+
+    <button onclick="
+      individualPath('Rock')
+    ">Rock</button>
+    <button onclick="
+      individualPath('Paper')
+    ">Paper</button>
+    <button onclick="
+      individualPath('Scissors')
+    ">Scissors</button>
+
+
+
+
+
+    <script>
+
+      function individualPath(individualMove) {
+        const systemvalue = systemMove();
+        outPut = '';
+
+        if (individualMove === 'Rock'){
+
+          if (systemvalue === 'Rock') {
+              outPut = 'Tie';
+            } else if (systemvalue === 'Paper') {
+              outPut = 'You lose';
+            } else{outPut = 'You win';}
+      
+        } else if(individualMove === 'Paper') {
+
+          if (systemvalue === 'Rock') {
+              outPut = 'You win';
+            } else if (systemvalue === 'Paper') {
+              outPut = 'Tie';
+            } else{outPut = 'You lose';}
+
+        } else{
+
+          if (systemvalue === 'Rock') {
+              outPut = 'You lose';
+            } else if (systemvalue === 'Paper') {
+              outPut = 'You win';
+            } else{outPut = 'Tie';}
+
+        }
+
+        alert(`You picked ${individualMove} system picked ${systemvalue}. ${outPut}`)
+      }
+
+
+
+      function systemMove() {
+        let systemvalue = "";
+        const systemNumber = Math.random();
+        let outPut = "";
+
+        if(systemNumber >= 0 && systemNumber < 1/3) {
+          systemvalue = 'Rock';
+        } else if(systemNumber >= 1/3 && systemNumber < 2/3) {
+          systemvalue = 'Paper';
+        } else{systemvalue = 'Scissors';}
+
+
+        return systemvalue;
+      }
+    </script>
+  </body>
+</html>

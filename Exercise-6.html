@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=8, initial-scale=1.0">
+    <title>Exersice 6</title>
+</head>
+<!-- Exersice 6a - 6d -->
+<body>
+    <button onclick="
+        let hour = Math.floor(Math.random()* 24);
+        let greetings = '';
+        let name = 'Haroun';
+        if (hour >= 6 && hour < 12) {
+            greetings = `Good Morning! ${name}`;
+        } else if(hour >= 13 && hour < 17) {
+            greetings = `Good afternoon! ${name}`
+        } else{greetings = `Good night! ${name}`;}
+
+
+        console.log(greetings);
+        console.log(hour);
+        alert(`${greetings}`)
+    ">Time</button>
+
+
+    <button onclick="
+        let age = Math.floor(Math.random()*100);
+        const isHoliday = Math.random() < 1/2;
+
+        if ((age <= 6 && isHoliday) || (age >= 65 && isHoliday))  {
+            console.log('Discount');
+        } else{console.log('No discouunt');}
+
+        
+
+        console.log(age);
+        console.log(isHoliday);
+    ">What's your age</button>
+
+    <script>
+        
+    </script>
+</body>
+</html>

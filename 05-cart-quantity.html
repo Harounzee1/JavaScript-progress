@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <h2>Cart Quantity</h2>
+    <button onclick="
+        console.log(`Cart Quanitity: ${cartQuantity}`);
+        cartLevel();
+        ">Show Quantity</button>
+
+    <button onclick="
+
+        // cartQuantity = cartQuantity + 1;
+        cartQuantity ++;
+        console.log(`Cart Quaantity: ${cartQuantity}`);
+        cartLevel();
+    
+    ">Add to cart</button>
+
+    <button onclick="
+
+        // cartQuantity = cartQuantity + 2;
+        cartQuantity += 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        cartLevel();
+    
+    ">+2</button>
+
+    <button onclick="
+    
+        cartQuantity = cartQuantity + 3;
+        console.log(`Cart Quantiy: ${cartQuantity}`)
+        cartLevel();
+    
+    ">+3</button>
+
+    <!-- Excercise 5h -->
+
+    <button onclick="
+        cartQuantity += 4;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        cartLevel();
+    ">+4</button>
+
+
+    <button onclick="
+        cartQuantity += 5;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        cartLevel();
+    ">+5</button>
+
+    <!-- Exercise 5i -->
+
+    <button onclick="
+        cartQuantity --;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        cartLevel()
+    ">Remove from cart</button>
+
+    <!-- Exercise 5j -->
+
+    <button onclick="
+        cartQuantity -= 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        cartLevel()
+    ">-2</button>
+
+
+    <button onclick="
+        cartQuantity -= 3;
+        console.log(`Cart Quantity: ${cartQuantity}`)
+        cartLevel()
+    ">-3</button>
+
+    <!-- ...... -->
+
+    <button onclick="
+    
+        cartQuantity  = 0;
+        console.log('Cart Quantity was Reset');
+        console.log(`Cart Quaantity: ${cartQuantity}`);
+        
+    " >Reset Cart</button>
+
+    <script>
+        let cartQuantity = 0;
+
+        function cartLevel() {
+            if (cartQuantity >= 10 ) {
+            console.log('The cart is full');
+
+            alert('The cart is full');
+            }
+
+            
+            if (cartQuantity <= 0) {
+                console.log('Not enough')
+                alert('Not enough');
+            }
+        }
+
+    </script>
+</body>
+</html>
